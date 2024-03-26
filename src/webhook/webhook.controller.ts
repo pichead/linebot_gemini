@@ -13,9 +13,12 @@ export class WebhookController {
   }
 
   @Post("linebot-webhook")
-  lineNoti(@Body() createWebhookDto: CreateWebhookDto) {
-    console.info("createWebhookDto : ",createWebhookDto)
-    return createWebhookDto
+  lineNoti(@Body() body) {
+    console.info("body : ",body)
+    const events = body.events;
+
+    console.info("events test : ",events)
+    return body
     // return this.webhookService.create(createWebhookDto);
   }
 
