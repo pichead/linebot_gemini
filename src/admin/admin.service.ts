@@ -13,7 +13,7 @@ export class AdminService {
 
     const data = await admin.findAll()
 
-    return { message: "ok", data: data }
+    return { message: "ok", data: data,version:1 }
 
   }
 
