@@ -10,8 +10,10 @@ export class AdminService {
   }
 
   async findAll() {
-    
-    return await admin.findAll()
+
+    const data = await admin.findAll()
+
+    return { message: "ok", data: data }
 
   }
 
