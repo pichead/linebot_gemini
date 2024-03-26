@@ -12,6 +12,6 @@ export async function findAll(){
 
     } catch (error) {
         console.log(error);
-        return null
+        return {res:null,error:error}
     }
 }
